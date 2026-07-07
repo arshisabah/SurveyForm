@@ -16,5 +16,8 @@ export const responsesService = {
     const list = this.allPollVotes();
     list.push({ id: genId(), votedAt: nowIso(), ...payload });
     storage.set(VOTE_KEY, list);
+  },
+  removeFormResponse(responseId) {
+    storage.set(FORM_KEY, this.allFormResponses().filter(response => response.id !== responseId));
   }
 };

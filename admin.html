@@ -16,24 +16,43 @@
   </nav>
 
   <main class="container">
-    <h1>Admin Module</h1>
+    <div class="admin-hero card">
+      <div>
+        <p class="eyebrow">Admin Studio</p>
+        <h1>Smart Survey Builder</h1>
+        <p class="muted">Create configurable forms and polls, review submissions, and manage live responses without changing code.</p>
+      </div>
+      <div class="admin-hero-stats">
+        <div class="hero-stat"><span>Forms</span><strong id="hero-form-count">0</strong></div>
+        <div class="hero-stat"><span>Polls</span><strong id="hero-poll-count">0</strong></div>
+        <div class="hero-stat"><span>Responses</span><strong id="hero-response-count">0</strong></div>
+      </div>
+    </div>
 
-    <section class="card">
+    <section class="card admin-panel">
       <h2>Create Form</h2>
       <div id="form-builder"></div>
     </section>
 
-    <section class="card">
+    <section class="card admin-panel">
+      <div class="section-head">
+        <h2>Form Submissions</h2>
+        <p class="muted">Inspect each submitted response, who sent it, and the captured field values.</p>
+      </div>
+      <div id="form-responses-panel"></div>
+    </section>
+
+    <section class="card admin-panel">
       <h2>Create Poll</h2>
       <div id="poll-builder"></div>
     </section>
 
-    <section class="card">
+    <section class="card admin-panel">
       <h2>Manage Forms</h2>
       <div id="admin-forms-list"></div>
     </section>
 
-    <section class="card">
+    <section class="card admin-panel">
       <h2>Manage Polls</h2>
       <div id="admin-polls-list"></div>
     </section>
@@ -44,5 +63,7 @@
   <script type="module" src="js/modules/admin/pollBuilder.js"></script>
   <script type="module" src="js/modules/admin/formList.js"></script>
   <script type="module" src="js/modules/admin/pollList.js"></script>
+  <script type="module" src="js/modules/admin/formResponsesPanel.js"></script>
+  <script type="module" src="js/modules/admin/adminHero.js"></script>
 </body>
 </html>
