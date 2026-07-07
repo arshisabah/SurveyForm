@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User - Smart Survey</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/user.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <nav class="container nav">
+    <a href="index.html">Home</a>
+    <a href="admin.html">Admin</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <main class="container">
+    <h1>User Module</h1>
+
+    <section class="card">
+      <h2>Forms</h2>
+      <div class="row">
+        <input id="forms-search" placeholder="Search forms by name..." />
+        <select id="forms-status-filter">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+      <div id="forms-catalog"></div>
+      <div id="form-renderer"></div>
+    </section>
+
+    <section class="card">
+      <h2>Polls</h2>
+      <div class="row">
+        <input id="polls-search" placeholder="Search polls by question..." />
+        <select id="polls-status-filter">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+      <div id="polls-catalog"></div>
+      <div id="poll-renderer"></div>
+      <div id="poll-results"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/modules/user/formsCatalog.js"></script>
+  <script type="module" src="js/modules/user/formRenderer.js"></script>
+  <script type="module" src="js/modules/user/pollsCatalog.js"></script>
+  <script type="module" src="js/modules/user/pollRenderer.js"></script>
+</body>
+</html>

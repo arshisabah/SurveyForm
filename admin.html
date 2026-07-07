@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Smart Survey</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <nav class="container nav">
+    <a href="index.html">Home</a>
+    <a href="user.html">User</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+
+  <main class="container">
+    <h1>Admin Module</h1>
+
+    <section class="card">
+      <h2>Create Form</h2>
+      <div id="form-builder"></div>
+    </section>
+
+    <section class="card">
+      <h2>Create Poll</h2>
+      <div id="poll-builder"></div>
+    </section>
+
+    <section class="card">
+      <h2>Manage Forms</h2>
+      <div id="admin-forms-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>Manage Polls</h2>
+      <div id="admin-polls-list"></div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/modules/admin/formBuilder.js"></script>
+  <script type="module" src="js/modules/admin/pollBuilder.js"></script>
+  <script type="module" src="js/modules/admin/formList.js"></script>
+  <script type="module" src="js/modules/admin/pollList.js"></script>
+</body>
+</html>
