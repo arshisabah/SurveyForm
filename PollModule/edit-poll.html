@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edit Poll</title>
+
+    <link
+        rel="stylesheet"
+        href="css/poll.css"
+    >
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Poll Management</h1>
+
+        <a
+            href="index.html"
+            class="btn btn-secondary"
+        >
+            Back to Polls
+        </a>
+
+    </header>
+
+
+    <main class="form-container">
+
+        <h2>Edit Poll</h2>
+
+        <!-- Success / Error Message -->
+
+        <div
+            id="message"
+            class="message"
+        ></div>
+
+
+        <form id="editPollForm">
+
+            <!-- Poll Question -->
+
+            <div class="form-group">
+
+                <label for="pollQuestion">
+                    Poll Question *
+                </label>
+
+                <input
+                    type="text"
+                    id="pollQuestion"
+                    placeholder="Enter poll question"
+                >
+
+            </div>
+
+
+            <!-- Choice Type -->
+
+            <div class="form-group">
+
+                <label>
+                    Choice Type *
+                </label>
+
+                <div class="radio-group">
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="choiceType"
+                            value="single"
+                        >
+
+                        Single Choice
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="choiceType"
+                            value="multiple"
+                        >
+
+                        Multiple Choice
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Poll Options -->
+
+            <div class="form-group">
+
+                <div class="option-header">
+
+                    <label>
+                        Poll Options *
+                    </label>
+
+                    <button
+                        type="button"
+                        id="addOptionBtn"
+                        class="btn btn-small"
+                    >
+                        + Add Option
+                    </button>
+
+                </div>
+
+
+                <div id="optionsContainer">
+                </div>
+
+            </div>
+
+
+            <!-- Poll Status -->
+
+            <div class="form-group">
+
+                <label for="pollStatus">
+                    Status
+                </label>
+
+                <select id="pollStatus">
+
+                    <option value="active">
+                        Active
+                    </option>
+
+                    <option value="inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="form-actions">
+
+                <a
+                    href="index.html"
+                    class="btn btn-secondary"
+                >
+                    Cancel
+                </a>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Update Poll
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <!-- JavaScript Files -->
+
+    <script src="js/constants.js"></script>
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/utils.js"></script>
+
+    <script src="js/edit-poll.js"></script>
+
+</body>
+
+</html>

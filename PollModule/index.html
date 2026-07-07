@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manage Polls</title>
+
+    <link
+        rel="stylesheet"
+        href="css/poll.css"
+    >
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Poll Management</h1>
+
+        <a
+            href="create-poll.html"
+            class="btn btn-primary"
+        >
+            + Create Poll
+        </a>
+
+    </header>
+
+    <main class="main-container">
+
+        <section class="filters">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search polls..."
+            >
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="active">
+                    Active
+                </option>
+
+                <option value="inactive">
+                    Inactive
+                </option>
+
+            </select>
+
+        </section>
+
+        <section
+            id="pollList"
+            class="poll-grid"
+        >
+        </section>
+
+        <p
+            id="emptyMessage"
+            class="empty-message"
+        >
+            No polls found.
+        </p>
+
+    </main>
+
+    <script src="js/constants.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/manage-polls.js"></script>
+
+</body>
+
+</html>
